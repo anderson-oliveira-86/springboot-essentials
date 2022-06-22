@@ -7,9 +7,8 @@ import com.academy.devdojo.springboot.repository.AnimeRepository;
 import com.academy.devdojo.springboot.requests.AnimePostRequestBody;
 import com.academy.devdojo.springboot.requests.AnimePutRequestBody;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -31,6 +30,7 @@ public class AnimeService {
                 .orElseThrow(() -> new BadRequestException("Anime Id not found"));
     }
 
+    @Transactional(rollbackFor = Exception.class) // annotation for rollback in the database if was thrown exception
     public Anime save(AnimePostRequestBody animePostRequestBody) {
         Anime anime = AnimeMapper.INSTANCE.toAnime(animePostRequestBody);
         return animeRepository.save(anime);
