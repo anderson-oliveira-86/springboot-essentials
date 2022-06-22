@@ -1,6 +1,8 @@
 package com.academy.devdojo.springboot.service;
 
 import com.academy.devdojo.springboot.domain.Anime;
+import com.academy.devdojo.springboot.exception.BadRequestException;
+import com.academy.devdojo.springboot.mapper.AnimeMapper;
 import com.academy.devdojo.springboot.repository.AnimeRepository;
 import com.academy.devdojo.springboot.requests.AnimePostRequestBody;
 import com.academy.devdojo.springboot.requests.AnimePutRequestBody;
@@ -20,14 +22,17 @@ public class AnimeService {
     public List<Anime> listAll(){
         return animeRepository.findAll();
     }
+    public List<Anime> findByName(String name){
+        return animeRepository.findByName(name);
+    }
 
     public Anime findById(long id){
         return animeRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST , "Anime Id not found"));
+                .orElseThrow(() -> new BadRequestException("Anime Id not found"));
     }
 
     public Anime save(AnimePostRequestBody animePostRequestBody) {
-        Anime anime = Anime.builder().name(animePostRequestBody.getName()).build();
+        Anime anime = AnimeMapper.INSTANCE.toAnime(animePostRequestBody);
         return animeRepository.save(anime);
     }
 
@@ -36,12 +41,9 @@ public class AnimeService {
     }
 
     public void replace(AnimePutRequestBody animePutRequestBody) {
-        findById(animePutRequestBody.getId());
-        Anime anime = Anime.builder()
-                .id(animePutRequestBody.getId())
-                .name(animePutRequestBody.getName())
-                .build();
-
+        Anime savedAnime = findById(animePutRequestBody.getId());
+        Anime anime = AnimeMapper.INSTANCE.toAnime(animePutRequestBody);
+        anime.setId(savedAnime.getId());
         animeRepository.save(anime);
     }
 }
