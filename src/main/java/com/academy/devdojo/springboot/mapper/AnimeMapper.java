@@ -4,9 +4,11 @@ import com.academy.devdojo.springboot.domain.Anime;
 import com.academy.devdojo.springboot.requests.AnimePostRequestBody;
 import com.academy.devdojo.springboot.requests.AnimePutRequestBody;
 import org.mapstruct.Mapper;
+import org.mapstruct.MapperConfig;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel = "spring")
+@Mapper
+@MapperConfig(componentModel = "spring")
 public abstract class AnimeMapper {
 
     public static final AnimeMapper INSTANCE = Mappers.getMapper(AnimeMapper.class);
