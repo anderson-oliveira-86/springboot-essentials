@@ -1,0 +1,17 @@
+INSERT INTO anime.anime (name , url) VALUES ("Dragon Ball Z" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Naruto" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("One Piece" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Death Note" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Hunter x Hunter" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Bleach" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Pokemon" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Full Metal Alchemist Brotherhood" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Cavaleiros do Zodiaco" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Yu-Gi-Oh" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Yu Yu Hakusho" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("InuYasha" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Digimon" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Samurai X" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Neon Genesis Evangelion" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Monster" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
+INSERT INTO anime.anime (name , url) VALUES ("Clannad" , "https://www.maioresemelhores.com/melhores-animes-de-todos-os-tempos/");
