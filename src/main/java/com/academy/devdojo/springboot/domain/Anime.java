@@ -24,5 +24,4 @@ public class Anime {
     private String name;
     private String url;
 
-
 }

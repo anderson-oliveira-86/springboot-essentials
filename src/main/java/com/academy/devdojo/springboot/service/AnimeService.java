@@ -38,7 +38,7 @@ public class AnimeService {
 
     @Transactional(rollbackFor = Exception.class) // annotation for rollback in the database if was thrown exception
     public Anime save(AnimePostRequestBody animePostRequestBody) {
-        Anime anime = AnimeMapper.INSTANCE.toAnime(animePostRequestBody);
+        Anime anime = AnimeMapper.toAnime(animePostRequestBody);
         return animeRepository.save(anime);
     }
 
@@ -48,7 +48,7 @@ public class AnimeService {
 
     public void replace(AnimePutRequestBody animePutRequestBody) {
         Anime savedAnime = findById(animePutRequestBody.getId());
-        Anime anime = AnimeMapper.INSTANCE.toAnime(animePutRequestBody);
+        Anime anime = AnimeMapper.toAnime(animePutRequestBody);
         anime.setId(savedAnime.getId());
         animeRepository.save(anime);
     }
