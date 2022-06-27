@@ -13,6 +13,15 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 import javax.servlet.http.Cookie;
 
+/**
+ * BasicAuthenticationFilter
+ * UsernamePasswordAuthenticationFilter
+ * DefaultLoginPageGeneratingFilter
+ * DefaultLogoutPageGeneratingFilter
+ * FilterSecurityInterceptor
+ * Authentication -> Authorization
+ */
+
 @EnableWebSecurity
 @Log4j2
 @EnableMethodSecurity(prePostEnabled = true)
@@ -25,6 +34,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .authorizeRequests()
                 .anyRequest()
                 .authenticated()
+                .and()
+                .formLogin()
                 .and()
                 .httpBasic();
     }
