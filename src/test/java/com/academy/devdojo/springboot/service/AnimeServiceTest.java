@@ -159,7 +159,7 @@ class AnimeServiceTest {
     @Test
     @DisplayName("replace updates anime when successful")
     void replace_UpdatesAnime_WhenSuccessful(){
-        Assertions.assertThatCode(() -> animeService.replace(AnimePutRequestBodyCreator.createAnimePostRequestBody()))
+        Assertions.assertThatCode(() -> animeService.replace(AnimePutRequestBodyCreator.createAnimePutRequestBody()))
                 .doesNotThrowAnyException();
 
     }

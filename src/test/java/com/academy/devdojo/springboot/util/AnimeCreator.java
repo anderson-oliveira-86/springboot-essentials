@@ -6,7 +6,7 @@ public class AnimeCreator {
 
     public static Anime createAnimeToBeSaved(){
         return Anime.builder()
-                .name("Anime test")
+                .name("AnimeTest")
                 .url("http://localhost:8080/animes")
                 .build();
     }
@@ -14,7 +14,7 @@ public class AnimeCreator {
     public static Anime createValidAnime(){
         return Anime.builder()
                 .id(1L)
-                .name("Anime test")
+                .name("AnimeTest")
                 .url("http://localhost:8080/animes")
                 .build();
     }

@@ -5,7 +5,7 @@ import com.academy.devdojo.springboot.requests.AnimePutRequestBody;
 
 public class AnimePutRequestBodyCreator {
 
-    public static AnimePutRequestBody createAnimePostRequestBody(){
+    public static AnimePutRequestBody createAnimePutRequestBody(){
         return AnimePutRequestBody.builder()
                 .id(AnimeCreator.createValidUpdateAnime().getId())
                 .name(AnimeCreator.createValidUpdateAnime().getName())
